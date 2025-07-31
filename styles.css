@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Box model reset */
+  *,
+  *::before,
+  *::after {
+    @apply m-0 p-0 box-border;
+  }
+
+  /* Base typography */
+  html {
+    @apply scroll-smooth font-sans;
+  }
+
+  /* List reset */
+  ul, ol {
+    @apply list-none;
+  }
+
+  /* Interactive elements with accessibility */
+  button,
+  a {
+    @apply cursor-pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+}
