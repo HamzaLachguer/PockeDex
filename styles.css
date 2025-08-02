@@ -1,31 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  /* Box model reset */
-  *,
-  *::before,
-  *::after {
-    @apply m-0 p-0 box-border;
-  }
 
-  /* Base typography */
-  html {
-    @apply scroll-smooth font-sans;
-  }
 
-  /* List reset */
-  ul, ol {
-    @apply list-none;
-  }
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Interactive elements with accessibility */
-  button,
-  a {
-    @apply cursor-pointer;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-  }
+tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: .25rem;
+}
+
+th {
+  background-color: #64748b;
+  padding: 8px;
+  color: #f8fafc;
+  font-weight: 500;
 }

@@ -10,12 +10,12 @@
 
   <title>Pockedex - Your Ultimate Pokémon Encyclopedia</title>
   
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/fav-icon.svg" type="image/x-icon">
   
-    <!--
-      *** Tailwind via CDN ***
-      **
-    -->
+  <!--
+    *** Tailwind via CDN ***
+    **
+  -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css">
 
@@ -25,10 +25,81 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="bg-slate-950">
   
-  <header></header>
+  <header>
+  </header>
+
+  <main class="grid place-items-center h-screen">
+
+    <div class="card-container bg-slate-100 px-4 py-8 rounded-2xl flex flex-col gap-4 w-[325px] md:w-[500px]">
+
+      <form class="flex flex-col gap-1" action="">
+        <label class="text-sm font-semibold text-center mb-2" for="search-input">Search for Creature Name or ID:</label>
+        <input id="search-input" class="h-10 px-3 border border-solid border-slate-950 focus:outline-none text-sm font-medium" type="text">
+        <button id="search-btn" class="h-10 bg-slate-500 text-slate-50">Search</button>
+      </form>
+
+      <div class="output h-[160px] flex flex-col gap-1">
+        <h2 class="text-lg flex items-center gap-2">
+          <span class="name font-bold uppercase"></span>
+          <span class="id font-medium"></span>
+        </h2>
+
+        <h4 class="size text-sm font-normal flex items-center gap-2">
+          <span class="weight"></span>
+          <span class="height"></span>
+        </h4>
+
+        <ul class="types text-sm font-medium flex gap-1">
+        </ul>
+
+        <div class="h-fit flex flex-col gap-0">
+          <h3 class="special-name text-base font-bold"></h3>
+          <p class="description text-sm  h-fit"></p>
+        </div>
+      </div>
+
+      <table>
+        <tbody class="flex flex-col gap-1">
+          <tr class="text-base font-medium capitalize">
+            <th>base</th>
+            <th>status</th>
+          </tr>
+          <tr>
+            <th>HP:</th>
+            <th id="hp"></th>
+          </tr>
+          <tr>
+            <th>Attack:</th>
+            <th id="attack"></th>
+          </tr>
+          <tr>
+            <th>Defense:</th>
+            <th id="defence"></th>
+          </tr>
+          <tr>
+            <th>Sp. Attack:</th>
+            <th id="special-attack"></th>
+          </tr>
+          <tr>
+            <th>Sp. Defence:</th>
+            <th id="special-defence"></th>
+          </tr>
+          <tr>
+            <th>Speed:</th>
+            <th id="speed"></th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer></footer>
+
+
+  <script src="./script.js"></script>
 </body>
 </html>
